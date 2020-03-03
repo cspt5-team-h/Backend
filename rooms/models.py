@@ -5,7 +5,7 @@ from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 class Room(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    #id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     name = models.CharField(max_length=200)
 
 class RoomDirection(models.Model):
@@ -16,7 +16,7 @@ class RoomDirection(models.Model):
         SOUTH = 'S', _('South')
         EAST = 'E', _('East')
         WEST = 'W', _('West')
-    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    #id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     starting_room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name="starting_room")
     ending_room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name="ending_room")
     direction = models.CharField(max_length=1, choices=Directions.choices)
