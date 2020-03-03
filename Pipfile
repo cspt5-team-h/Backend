@@ -10,6 +10,9 @@ django = "*"
 python-decouple = "*"
 gunicorn = "*"
 djangorestframework = "*"
+whitenoise = "*"
+dj-database-url = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.8"
