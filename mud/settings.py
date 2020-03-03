@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'mud-production.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'rooms',
     'rest_framework',
     'rest_framework.authtoken',
