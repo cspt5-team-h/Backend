@@ -11,7 +11,6 @@ class RoomViewSet(viewsets.ModelViewSet):
     queryset = Room.objects.all()
 
 class RoomDirectionSerializer(serializers.HyperlinkedModelSerializer):
-    starting_room = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     class Meta:
         model = RoomDirection
         fields = ('starting_room', 'ending_room', 'direction')
