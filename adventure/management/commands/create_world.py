@@ -41,7 +41,6 @@ class Command(BaseCommand):
             rooms[i] = Room(title="Pacman Digital Dot Coin Room Address: "+room_title_list[i], description="Public Key Hash: " + room_description_list[i])
             rooms[i].save()
 
-# ##############################################################################
         x = -1 # (this will become 0 on the first step)
         y = 0
         room_count = 0
