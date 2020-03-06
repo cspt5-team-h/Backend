@@ -51,7 +51,6 @@ class Command(BaseCommand):
         room_count = 0
         # Start generating rooms to the east
         direction = 1  # 1: east, -1: west
-
         reverse_dirs = {"n": "s", "s": "n", "e": "w", "w": "e"}
 
         # While there are rooms to be created...
