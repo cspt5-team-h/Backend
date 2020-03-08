@@ -80,6 +80,12 @@ class Command(BaseCommand):
 
             # Connect two room together (Zig Zag Pattern)
             if previous_room is not None:
+                # randomize north south connection
+                xConnect = set([random.randrange(1,MAP_WIDTH - 1) for i in range(5)])
+                if direction < 0 and y > 0 and y < MAP_HEIGHT and x+1 in xConnect:
+                    previous_room.connectRooms(grid[y-1][x+1], "s")
+                    grid[y-1][x+1].connectRooms(previous_room, reverse_dirs["s"])
+
                 previous_room.connectRooms(room, room_direction)
                 room.connectRooms(previous_room, reverse_dirs[room_direction])
                 previous_room.save()
