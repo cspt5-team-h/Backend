@@ -24,9 +24,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         """initial executing component for BaseCommand"""
-        ROOM_NUMBERS = 100
+        ROOM_NUMBERS = 500
         MAP_WIDTH = 10
-        MAP_HEIGHT = 10
+        MAP_HEIGHT = 100
 
         Room.objects.all().delete()
 
