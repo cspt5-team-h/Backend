@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['mud-production.herokuapp.com', 'csp5.herokuapp.com', '127.0.0.
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites',    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,7 +45,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
-    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'rest_auth.registration',
